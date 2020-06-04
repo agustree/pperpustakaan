@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 
 	public function index(){
 		$this->load->view('login');
+
 	}
 
 	function login(){
@@ -32,7 +33,7 @@ class Welcome extends CI_Controller {
 					'status' => 'login'
 				);
 				$this->session->set_userdata($session);
-				redirect(base_url().'admin');
+				redirect(base_url().'admin1/admin');
 			}else{
 				redirect(base_url().'welcome?pesan=gagal');			
 			}
