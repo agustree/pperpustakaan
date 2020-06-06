@@ -9,7 +9,11 @@ class Welcome extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('login');
+		if($this->session->userdata('status') == "login") {
+		    redirect(base_url().'admin');
+		}else{
+			$this->load->view('login');
+		}
 
 	}
 
